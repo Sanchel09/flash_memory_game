@@ -1,0 +1,129 @@
+body{
+    background: linear-gradient(180deg,#155843 , transparent);
+}
+
+.expand{
+    opacity:1;
+}
+
+.minimize{
+    opacity:0;
+}
+
+.gameBoard{
+    background-color: #155843;
+    padding: 10px;
+    border: 15px solid darkgrey;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.33);
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    .cardFront,.cardBack{
+        // width:100px;
+        height: 90px;
+        border:1px solid #ccc;
+        padding: 5px;
+        margin: 5px;
+        cursor: pointer;
+        box-shadow: 2px 3px 3px rgba(0,0,0,0.33);
+        border-radius: 5px;
+        background-color: white;
+        img{
+            object-fit: none;
+            width: 100%;
+            height: 100%;
+        }
+        .extraCard{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            font-size: 285%;
+            color: red;
+            border: 1px solid #CCC;
+            border-radius: 3px;
+        }
+    }
+}
+
+.nameDisplay{
+    background-color: #155843;
+    padding: 6px;
+    color: lightgrey;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.33);
+    border-radius: 5px;
+}
+
+.intro{
+    color: white;
+    text-shadow: 1px 2px 2px rgba(0,0,0,0.33);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 68px;
+}
+
+.timerSpan{
+    float: right;
+    .timer{
+        font-size: 20px;
+        font-weight: 500;
+        color:white;
+    }
+    .danger{
+        color: red;
+    }
+}
+
+.form-control,.btn{
+    padding:5px 10px !important;
+    font-size: 13px;
+    &:focus{
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.dialogBox-backface{
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    .dialogBox{
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(0,0,0,0.8);
+        .dialogBoxCongrats{
+            font-size: 26px;
+            color: red;
+            font-weight: bold;
+            animation:blinker 1s linear infinite;
+        }
+        @keyframes blinker {
+            30%{
+                color:yellow;
+            }
+            50% {
+              opacity: 0;
+              
+            }
+        }
+        .dialogBoxBody{
+            font-size: 21px;
+            color: #155843;
+        }
+    }
+}
+
+
+
